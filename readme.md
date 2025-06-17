@@ -1,10 +1,10 @@
 jtop 4.3.2 - (c) 2024, Raffaello Bonghi [raffaello@rnext.it]
 Website: https://rnext.it/jetson_stats
 
- Platform                                    Serial Number: [s|XX CLICK TO READ XXX]
+ 
   Machine: aarch64                           Hardware
   System: Linux                               Model: NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super
-  Distribution: Ubuntu 22.04 Jammy Jellyfish  699-level Part Number: 699-13767-0003-300 M.2
+  Distribution: Ubuntu 22.04 Jammy Jellyfish 
   Release: 5.15.148-tegra                     P-Number: p3767-0003
   Python: 3.10.12                             Module: NVIDIA Jetson Orin Nano (8GB ram)
                                               SoC: tegra234
