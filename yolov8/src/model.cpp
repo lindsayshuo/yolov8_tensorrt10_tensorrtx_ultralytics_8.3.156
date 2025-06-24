@@ -667,6 +667,7 @@ nvinfer1::IHostMemory* buildEngineYolov8DetP6(nvinfer1::IBuilder* builder, nvinf
                 1, 0, "model.30.dfl.conv.weight");
     nvinfer1::ITensor* inputTensor30_dfl_3[] = {dfl30_3->getOutput(0), split30_3_1->getOutput(0)};
     nvinfer1::IConcatenationLayer* cat30_dfl_3 = network->addConcatenation(inputTensor30_dfl_3, 2);
+    cat30_dfl_3->setAxis(1);
 
     nvinfer1::IPluginV2Layer* yolo = addYoLoLayer(
             network, std::vector<nvinfer1::IConcatenationLayer*>{cat30_dfl_0, cat30_dfl_1, cat30_dfl_2, cat30_dfl_3},
@@ -1938,6 +1939,7 @@ nvinfer1::IHostMemory* buildEngineYolov8PoseP6(nvinfer1::IBuilder* builder, nvin
     nvinfer1::ITensor* inputTensor30_dfl_3[] = {dfl30_3->getOutput(0), split30_3_1->getOutput(0),
                                                 shuffle_conv29->getOutput(0)};
     nvinfer1::IConcatenationLayer* cat30_dfl_3 = network->addConcatenation(inputTensor30_dfl_3, 3);
+    cat30_dfl_3->setAxis(1);
 
     nvinfer1::IPluginV2Layer* yolo = addYoLoLayer(
             network, std::vector<nvinfer1::IConcatenationLayer*>{cat30_dfl_0, cat30_dfl_1, cat30_dfl_2, cat30_dfl_3},
